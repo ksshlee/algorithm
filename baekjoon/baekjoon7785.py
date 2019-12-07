@@ -1,12 +1,10 @@
+#input 속도 가속을 위해서
 import sys
 input=sys.stdin.readline
 
-command = int(input())
-
-
 working={}
 
-for i in range(command):
+for i in range(int(input())):
     text=input().strip().split(" ")
     if text[1] == 'enter':
         working[text[0]]=True
