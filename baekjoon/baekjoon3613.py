@@ -1,23 +1,15 @@
 #java로 변환
 def tojava(text):
-    #첫 문자가 _일때
-    if text[0] == "_":
+    #첫번째 or 마지막 문자가 _일때 __가 있을때
+    if text[0] == "_" or text[-1] == "_" or "__" in text:
         return "Error!"
 
-
-    #마지막 문자가 _일때
-    if text[-1] == "_":
-        return "Error!"
-    
     ans=""
-    flag=False
+    flag=False    
+
     for i in text:
         #대문자 일때
         if ord(i)>=65 and ord(i)<=90:
-            return "Error!"
-
-        #_가 연속해서 나올때
-        if i=="_" and flag==True:
             return "Error!"
 
         if i == "_":
